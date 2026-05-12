@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/MadsVS45/ci-node-app.git'
+                git branch: 'main',      // ✅ Fixed
+                url: 'https://github.com/MadsVS45/ci-node-app.git'
             }
         }
         stage('Install') {
